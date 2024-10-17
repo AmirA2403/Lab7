@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>To-Do List</title>
+  <style>
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(37, 100, 72, 0.526);
+    padding: 10px;
+
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #d2e9e1e6;
+    margin: 120px auto 30px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.todo-app h2 {
+    color:#002765 ;
+    margin-bottom: 20px;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #74cbd3;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    outline: none;
+    border: none;
+    font-size: 15px;
+    border-radius: 10px;
+    background: transparent;
+    padding: 12px 80px;
+    font-weight: 15px;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 15px 45px;
+    background: #1e7978;
+    color: white;
+    font-size: 19px;
+    cursor: pointer;
+    border-radius: 35px;
+    
+}
+ul li{
+    list-style: none;
+    font-size: 22px;
+    padding: 15px 10px 15px 45px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li ::before {
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    top: 12px;
+    left: 8px;
+}
+ul li button {
+  font-size: 16px;
+  background-color: #dc3532;
+}
+  </style>
+</head>
+<body> 
+  <div class="container">
+    <div class="todo-app">
+        <h2>To-Do List</h2>
+           <div class="row">
+            <input type="text" id="input-box" placeholder="Write your task">
+            <button id="add-btn">Add</button>
+        </div>
+        <ul id="list-container">
+        </ul>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
